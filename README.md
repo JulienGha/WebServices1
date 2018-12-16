@@ -8,3 +8,4 @@ L'idée c'est que le serveur envoye les données à l'aide des protocoles http e
 Ce qu'il faut faire :
 - Il faut maintenant comprendre comment afficher tous ça en html/js sur une page web.
 - Je ne sais pas s'il faut juste générer un fichier html depuis java (ce qui ne semble pas surper dure) ou s'il faut faire des trucs du futur genre ce qu'on faisait en JEE...
+- Tu peux regarder ce que le prof à fait aussi mais c'est pas très claire.
