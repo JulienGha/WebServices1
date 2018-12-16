@@ -1,9 +1,10 @@
 package service;
 
 import java.util.List;
-
+import java.util.Set;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -40,9 +41,16 @@ public class CatalogService {
 	}
 	
 	@GET
-	@Path("/filmsKW/")
+	@Path("/filmsKW")
 	public List<Film> ListFilmByKeyWord(@QueryParam(value="keyword")String keyword) {
 		return metier.ListFilmByKeyWord(keyword);
+	}
+	
+	@GET
+	@Path("/films/city")
+	public Set<Film> ListfilmByCity(@QueryParam(value="city")String city)
+	{
+		return metier.ListFilmByCity(city);
 	}
 	
 	
@@ -57,6 +65,38 @@ public class CatalogService {
 	public Cinema SelectCinemaById(@PathParam (value="id") int id){
 		return metier.CinemaById(id);
 	}
+	
+	@GET
+	@Path("/cinemas/city")
+	public List<Cinema> ListCinemaByCity(@QueryParam(value="city")String city)
+	{
+		return metier.ListCinemaByCity(city);
+	}
+	
+	
+	
+	
+	/* post */
+	
+	@POST
+	@Path("/film")
+	public Film newFilm(Film f)
+	{
+		return metier.addFilm(f);
+	}
+	
+	
+	@POST
+	@Path("/seance")
+	public Seance newSeance(Seance s, Cinema c)
+	{
+		return metier.addSeance(s, c);
+	}
+	
+	
+	
+	
+	
 	
 	
 	

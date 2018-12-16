@@ -7,7 +7,7 @@ import java.util.List;
 public class Cinema implements Serializable{
 	private String _name;
 	private Address _location;
-	private List<Seance> _sessions;
+	private List<Seance> _seance;
 	private int _id;
 	
 	public Cinema() {
@@ -19,7 +19,7 @@ public class Cinema implements Serializable{
 		super();
 		this._name = _name;
 		this._location = _location;
-		this._sessions = new ArrayList<Seance>();
+		this._seance = new ArrayList<Seance>();
 		this._id = _id;
 	}
 	
@@ -29,11 +29,11 @@ public class Cinema implements Serializable{
 	public void set_id(int _id) {
 		this._id = _id;
 	}
-	public List<Seance> get_sessions() {
-		return _sessions;
+	public List<Seance> get_seance() {
+		return _seance;
 	}
-	public void set_sessions(List<Seance> _sessions) {
-		this._sessions = _sessions;
+	public void set_seance(List<Seance> _sessions) {
+		this._seance = _sessions;
 	}
 	public String get_name() {
 		return _name;
@@ -48,10 +48,10 @@ public class Cinema implements Serializable{
 		this._location = _location;
 	}
 	public String get_city() {
-		return _city;
+		
+		return _location.get_city();
 	}
 	public void set_city(String _city) {
-		this._city = _city;
+		this._location.get_city();
 	}
-	private String _city;
 }
