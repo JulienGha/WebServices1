@@ -18,6 +18,7 @@ public interface ICatalog {
 	public List<Film> listFilm();
 	public Film FilmById(int id);
 	public List<Film> ListFilmByKeyWord(String keyword);
+	public List<Film> ListFilmByKeyWords (String keyword);
 	public Set<Film> ListFilmByCity(String city);
 	
 	

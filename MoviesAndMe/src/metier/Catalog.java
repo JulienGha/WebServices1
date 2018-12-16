@@ -49,6 +49,8 @@ public class Catalog implements ICatalog{
 		addSeance(new Seance(film4,1,1,2019,15,6),c1);
 	}
 
+	
+	/* Film */
 	@Override
 	public List<Film> listFilm() {
 		return new ArrayList<Film>(_film.values());
@@ -59,15 +61,7 @@ public class Catalog implements ICatalog{
 		return _film.get(id);
 	}
 
-	@Override
-	public List<Cinema> listCinema() {
-		return new ArrayList<Cinema>(_cinema.values());
-	}
 
-	@Override
-	public Cinema CinemaById(int id) {
-		return _cinema.get(id);
-	}
 
 	@Override
 	public List<Film> ListFilmByKeyWord(String keyword) {
@@ -79,28 +73,26 @@ public class Catalog implements ICatalog{
 		}
 		return film;
 	}
+	public List<Film> ListFilmByKeyWords (String keyword) {
+
+		List<Film> result = new ArrayList<Film>();
+		String research = "";
+
+		for(Film movie:_film.values())  {
+			research += movie.get_title();
+			research += movie.get_actors();
+			//continuer pour tous les attributs
+			if (research.contains(keyword))
+				result.add(movie);
+			research = "";
+		}
+		return result;
+	}
 
 	@Override
 	public Film addFilm(Film f) {
 		_film.put(f.get_id(), f);
 		return f;
-	}
-	
-	@Override
-	public Seance addSeance(Seance s, Cinema c) {
-		_cinema.get(c.get_id()).get_seance().add(s);
-		return s;
-	}
-
-	@Override
-	public List<Cinema> ListCinemaByCity(String city) {
-		List<Cinema> cinema = new ArrayList<Cinema>();
-		for(Cinema c:_cinema.values())
-		{
-			if(c.get_city().equals(city))
-				cinema.add(c);
-		}
-		return cinema;
 	}
 	
 	public Set<Film> ListFilmByCity(String city){
@@ -116,6 +108,39 @@ public class Catalog implements ICatalog{
 		}
 		return film;
 	}
+	
+	@Override
+	public Seance addSeance(Seance s, Cinema c) {
+		_cinema.get(c.get_id()).get_seance().add(s);
+		return s;
+	}
+
+	/* Cinema */
+	
+	@Override
+	public List<Cinema> listCinema() {
+		return new ArrayList<Cinema>(_cinema.values());
+	}
+
+	@Override
+	public Cinema CinemaById(int id) {
+		return _cinema.get(id);
+	}
+	
+	@Override
+	public List<Cinema> ListCinemaByCity(String city) {
+		List<Cinema> cinema = new ArrayList<Cinema>();
+		for(Cinema c:_cinema.values())
+		{
+			if(c.get_city().equals(city))
+				cinema.add(c);
+		}
+		return cinema;
+	}
+	
+
+	
+
 
 
 	

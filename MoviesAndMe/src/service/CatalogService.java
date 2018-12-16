@@ -41,10 +41,18 @@ public class CatalogService {
 	}
 	
 	@GET
-	@Path("/filmsKW")
+	@Path("/films/title/keyword")
 	public List<Film> ListFilmByKeyWord(@QueryParam(value="keyword")String keyword) {
 		return metier.ListFilmByKeyWord(keyword);
 	}
+	
+	@GET
+	@Path("/films/keyword")
+	public List<Film> ListFilmByKeyWords(@QueryParam(value="keyword")String keyword) {
+		return metier.ListFilmByKeyWords(keyword);
+	}
+	
+	
 	
 	@GET
 	@Path("/films/city")
