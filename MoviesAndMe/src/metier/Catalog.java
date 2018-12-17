@@ -158,6 +158,18 @@ public class Catalog implements ICatalog{
 		
 		return seance;
 	}
+
+	@Override
+	public Set<String> ListCity() {
+		
+		Set<String> city = new HashSet<String>();
+		
+		for(Cinema c:_cinema.values())
+		{
+			city.add(c.get_city());
+		}
+		return city;
+	}
 	
 
 	
