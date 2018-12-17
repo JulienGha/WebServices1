@@ -51,17 +51,14 @@ public class CatalogService {
 	public List<Film> ListFilmByKeyWords(@QueryParam(value="keyword")String keyword) {
 		return metier.ListFilmByKeyWords(keyword);
 	}
-	
-	
-	
+
 	@GET
 	@Path("/films/city")
 	public Set<Film> ListfilmByCity(@QueryParam(value="city")String city)
 	{
 		return metier.ListFilmByCity(city);
 	}
-	
-	
+
 	@GET
 	@Path("/cinemas")
 	public List<Cinema> AllCinema(){
@@ -81,7 +78,12 @@ public class CatalogService {
 		return metier.ListCinemaByCity(city);
 	}
 	
-	
+	@GET
+	@Path("/seances")
+	public Set<Seance> ListSeanceByCityFilm(@QueryParam(value="city")String city,@QueryParam(value="id")int id)
+	{
+		return metier.ListSeanceByCityFilm(city, id);
+	}
 	
 	
 	/* post */
@@ -100,12 +102,5 @@ public class CatalogService {
 	{
 		return metier.addSeance(s, c);
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 }

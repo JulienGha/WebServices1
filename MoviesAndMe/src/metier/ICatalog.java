@@ -26,6 +26,8 @@ public interface ICatalog {
 	public Cinema CinemaById(int id);
 	public List<Cinema> ListCinemaByCity(String city);
 	
+	
+	public Set<Seance> ListSeanceByCityFilm(String city, int id);
 	/* POST */
 	
 	public Film addFilm(Film f);
