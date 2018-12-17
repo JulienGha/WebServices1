@@ -3,6 +3,7 @@ package metier;
 import java.util.List;
 import java.util.Set;
 
+import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
 import metier.entities.*;
@@ -26,12 +27,14 @@ public interface ICatalog {
 	public List<Cinema> ListCinemaByCity(String city);
 	
 	public Set<Seance> ListSeanceByCityFilm(String city, int id);
+	public Seance SelectSeanceById(int id);
 	
 	public Set<String> ListCity();
 	/* POST */
 	
 	public Film addFilm(Film f);
 	public Seance addSeance(Seance s, Cinema c);
+	public Seance postSeance(Seance s);
 	
 	
 }

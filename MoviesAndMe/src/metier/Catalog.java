@@ -30,30 +30,37 @@ public class Catalog implements ICatalog{
 
 	
 	public void initializeCatalog() {
-		Cinema c1 =createCinema(new Cinema("Le Napoléon", new Address(1,"Rue du test","Paris","75001",1), 1));
-		Cinema c2 =createCinema(new Cinema("Le Louis XIV", new Address(1,"Rue de la monarchie","Brest","29200",2), 2));
-		Cinema c3 =createCinema(new Cinema("Les baladins", new Address(1,"Rue","Paris","75001",3), 3));
-		List<String> l1 = new ArrayList<String>();
-        l1.add("John Doe");
-        List<String> l2 = new ArrayList<String>();
-        l2.add("FR");
-		Film film1 = createMovie(new Film("star wars 1",60,l2,"Director Test",l1,18,1));
-		Film film2 = createMovie(new Film("star wars 2",60,l2,"Director Test",l1,18,2));
-		Film film3 = createMovie(new Film("star wars 3",60,l2,"Director Test",l1,18,3));
-		Film film4 = createMovie(new Film("star wars 4",60,l2,"Director Test",l1,18,4));
-//		addSeance(new Seance(film1,1,1,2019,15,1),c1);
-//		addSeance(new Seance(film1,1,1,2019,15,2),c2);
-//		addSeance(new Seance(film1,1,1,2019,15,3),c1);
-//		addSeance(new Seance(film2,1,1,2019,15,4),c1);
-//		addSeance(new Seance(film3,1,1,2019,15,5),c2);
-//		addSeance(new Seance(film4,1,1,2019,15,6),c1);
+        List<String> lang = new ArrayList<String>();
+        lang.add("FR");
+		
+		Cinema c1 = createCinema(new Cinema("Le Grand rex", new Address(1,"Boulevard Poissonnière","Paris","75002",1), 1));
+ 
+        
+		List<String> ActeurAquaman = new ArrayList<String>();
+		ActeurAquaman.add("Jason Momoa");
+		ActeurAquaman.add("Amber Heard");
+		ActeurAquaman.add("Willem Dafoe");
+		ActeurAquaman.add("Dolph Lundgren");
+		ActeurAquaman.add("Patrick Wilson");
+		ActeurAquaman.add("Nicole Kidman");
+		
+		Film film1 = createMovie(new Film("Aquaman",142,lang,"James Wan",ActeurAquaman,0,1));
 
-		addSeance(new Seance(film1,1,1,2019,15,1,1),c1);
-		addSeance(new Seance(film1,1,1,2019,15,2,2),c2);
-		addSeance(new Seance(film1,1,1,2019,15,3,1),c1);
-		addSeance(new Seance(film2,1,1,2019,15,4,1),c1);
-		addSeance(new Seance(film3,1,1,2019,15,5,2),c2);
-		addSeance(new Seance(film4,1,1,2019,15,6,1),c1);
+		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);
+//		
+//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,13,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,16,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,19,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,22,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+//		
+//		addSeance(new Seance(2,film1,20,12,2018,10,1),c1);
+//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+		
+		
+		Cinema c2 = createCinema(new Cinema("Bretagne", new Address(73,"Boulevard du Montparnasse","Paris","75006",2), 2));
+
 	}
 
 	
@@ -163,6 +170,8 @@ public class Catalog implements ICatalog{
 		}
 		return seance;
 	}
+	
+	
 
 
 	@Override
@@ -175,5 +184,33 @@ public class Catalog implements ICatalog{
 			city.add(c.get_city());
 		}
 		return city;
+	}
+
+	@Override
+	public Seance postSeance(Seance s) {
+		
+		int cinema_id = s.get_idCinema();
+		
+		s.set_movie(_film.get(s.get_movie().get_id()));
+
+		_cinema.get(cinema_id).get_seance().add(s);
+		
+		
+		return s;
+	}
+
+	@Override
+	public Seance SelectSeanceById(int id) {
+	
+		for(Cinema c:_cinema.values())
+		{
+			for(Seance s:c.get_seance())
+			{
+				if(s.get_id() == id)
+					return s;
+			}
+		}
+		
+		return null;
 	}
 }
