@@ -137,6 +137,27 @@ public class Catalog implements ICatalog{
 		}
 		return cinema;
 	}
+
+	@Override
+	public Set<Seance> ListSeanceByCityFilm(String city, int id) {
+		
+		Set<Seance> seance = new HashSet<Seance>();
+		List<Cinema> cinema = ListCinemaByCity(city);
+		
+		for(Cinema c:cinema)
+		{
+			for(Seance s:c.get_seance())
+			{
+				if(s.get_movie().get_id() == id)
+				{
+					seance.add(s);
+				}
+			}
+		}
+		
+		
+		return seance;
+	}
 	
 
 	
