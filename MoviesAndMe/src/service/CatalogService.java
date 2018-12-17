@@ -79,12 +79,18 @@ public class CatalogService {
 	}
 	
 	
-	
 	@GET
 	@Path("/seances")
 	public Set<Seance> ListSeanceByCityFilm(@QueryParam(value="city")String city,@QueryParam(value="id")int id)
 	{
 		return metier.ListSeanceByCityFilm(city, id);
+	}
+	
+	
+	@GET
+	@Path("/seance/{id}")
+	public Seance SelectSeanceById(@PathParam (value="id") int id){
+		return metier.SelectSeanceById(id);
 	}
 	
 	@GET
@@ -107,9 +113,9 @@ public class CatalogService {
 	
 	@POST
 	@Path("/seance")
-	public Seance newSeance(Seance s, Cinema c)
+	public Seance newSeance(Seance s)
 	{
-		return metier.addSeance(s, c);
+		return metier.postSeance(s);
 	}
 	
 }

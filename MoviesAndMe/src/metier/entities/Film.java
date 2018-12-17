@@ -17,8 +17,7 @@ public class Film implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Film(String _title, int _duration, List<String> _language, String _director, List<String> _actors,
-			int _ageMinimum,int _id) {
+	public Film(String _title, int _duration, List<String> _language, String _director, List<String> _actors, int _ageMinimum,int _id) {
 		super();
 		this._title = _title;
 		this._duration = _duration;

@@ -4,26 +4,26 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Seance implements Serializable{
+	
+	private int _id;
 	private Film _movie;
 	private int _day;
 	private int _month;
 	private int _year;
 	private int _hour;
-	private int _id;
 	private int _idCinema;
 	
 	public Seance() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public Seance(Film _movie, int _day, int _month, int _year, int _hour, int _id, int _idCinema) {
+	public Seance(int _id, Film _movie, int _day, int _month, int _year, int _hour, int _idCinema) {
 		super();
+		this._id = _id;
 		this._movie = _movie;
 		this._day = _day;
 		this._month = _month;
 		this._year = _year;
 		this._hour = _hour;
-		this._id = _id;
 		this._idCinema = _idCinema;
 	}
 	
