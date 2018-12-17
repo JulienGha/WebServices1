@@ -41,12 +41,19 @@ public class Catalog implements ICatalog{
 		Film film2 = createMovie(new Film("star wars 2",60,l2,"Director Test",l1,18,2));
 		Film film3 = createMovie(new Film("star wars 3",60,l2,"Director Test",l1,18,3));
 		Film film4 = createMovie(new Film("star wars 4",60,l2,"Director Test",l1,18,4));
-		addSeance(new Seance(film1,1,1,2019,15,1),c1);
-		addSeance(new Seance(film1,1,1,2019,15,2),c2);
-		addSeance(new Seance(film1,1,1,2019,15,3),c1);
-		addSeance(new Seance(film2,1,1,2019,15,4),c1);
-		addSeance(new Seance(film3,1,1,2019,15,5),c2);
-		addSeance(new Seance(film4,1,1,2019,15,6),c1);
+//		addSeance(new Seance(film1,1,1,2019,15,1),c1);
+//		addSeance(new Seance(film1,1,1,2019,15,2),c2);
+//		addSeance(new Seance(film1,1,1,2019,15,3),c1);
+//		addSeance(new Seance(film2,1,1,2019,15,4),c1);
+//		addSeance(new Seance(film3,1,1,2019,15,5),c2);
+//		addSeance(new Seance(film4,1,1,2019,15,6),c1);
+
+		addSeance(new Seance(film1,1,1,2019,15,1,1),c1);
+		addSeance(new Seance(film1,1,1,2019,15,2,2),c2);
+		addSeance(new Seance(film1,1,1,2019,15,3,1),c1);
+		addSeance(new Seance(film2,1,1,2019,15,4,1),c1);
+		addSeance(new Seance(film3,1,1,2019,15,5,2),c2);
+		addSeance(new Seance(film4,1,1,2019,15,6,1),c1);
 	}
 
 	
@@ -154,10 +161,9 @@ public class Catalog implements ICatalog{
 				}
 			}
 		}
-		
-		
 		return seance;
 	}
+
 
 	@Override
 	public Set<String> ListCity() {
@@ -170,13 +176,4 @@ public class Catalog implements ICatalog{
 		}
 		return city;
 	}
-	
-
-	
-
-
-
-	
-	
-
 }

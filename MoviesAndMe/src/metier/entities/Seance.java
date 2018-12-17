@@ -8,13 +8,15 @@ public class Seance implements Serializable{
 	private int _day;
 	private int _month;
 	private int _year;
+	private int _hour;
 	private int _id;
+	private int _idCinema;
 	
 	public Seance() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Seance(Film _movie, int _day, int _month, int _year, int _hour, int _id) {
+	public Seance(Film _movie, int _day, int _month, int _year, int _hour, int _id, int _idCinema) {
 		super();
 		this._movie = _movie;
 		this._day = _day;
@@ -22,6 +24,7 @@ public class Seance implements Serializable{
 		this._year = _year;
 		this._hour = _hour;
 		this._id = _id;
+		this._idCinema = _idCinema;
 	}
 	
 	public int get_id() {
@@ -60,5 +63,11 @@ public class Seance implements Serializable{
 	public void set_hour(int _hour) {
 		this._hour = _hour;
 	}
-	private int _hour;
+	public int get_idCinema() {
+		return _idCinema;
+	}
+	public void set_idCinema(int _idCinema) {
+		this._idCinema = _idCinema;
+	}
+	
 }
