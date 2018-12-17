@@ -25,7 +25,6 @@ public interface ICatalog {
 	public List<Cinema> listCinema();
 	public List<Cinema> ListCinemaByCity(String city);
 	
-	
 	public Set<Seance> ListSeanceByCityFilm(String city, int id);
 	
 	public Set<String> ListCity();

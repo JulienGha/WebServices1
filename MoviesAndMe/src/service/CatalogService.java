@@ -78,6 +78,8 @@ public class CatalogService {
 		return metier.ListCinemaByCity(city);
 	}
 	
+	
+	
 	@GET
 	@Path("/seances")
 	public Set<Seance> ListSeanceByCityFilm(@QueryParam(value="city")String city,@QueryParam(value="id")int id)
