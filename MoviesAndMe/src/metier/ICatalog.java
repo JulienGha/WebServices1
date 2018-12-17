@@ -21,13 +21,14 @@ public interface ICatalog {
 	public List<Film> ListFilmByKeyWords (String keyword);
 	public Set<Film> ListFilmByCity(String city);
 	
-	
-	public List<Cinema> listCinema();
 	public Cinema CinemaById(int id);
+	public List<Cinema> listCinema();
 	public List<Cinema> ListCinemaByCity(String city);
 	
 	
 	public Set<Seance> ListSeanceByCityFilm(String city, int id);
+	
+	public Set<String> ListCity();
 	/* POST */
 	
 	public Film addFilm(Film f);

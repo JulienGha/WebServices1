@@ -85,6 +85,13 @@ public class CatalogService {
 		return metier.ListSeanceByCityFilm(city, id);
 	}
 	
+	@GET
+	@Path("/city")
+	public Set<String> ListCity()
+	{
+		return metier.ListCity();
+	}
+	
 	
 	/* post */
 	
