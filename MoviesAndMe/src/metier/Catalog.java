@@ -50,16 +50,73 @@ public class Catalog implements ICatalog{
 		ActeurAquaman.add("Nicole Kidman");
 		
 		Film film1 = createMovie(new Film("Aquaman",142,lang,"James Wan",ActeurAquaman,0,1));
+		
+		List<String> Acteur50 = new ArrayList<String>();
+		Acteur50.add("Jamie Dornan");
+		Acteur50.add("Dakota Johnson");
+		Acteur50.add("Eloise Mumford");
+		Acteur50.add("Luke Grimes");
+		Acteur50.add("Rita Ora");
+		
+		Film film2 = createMovie(new Film("Cinquante nuances de Grey",125,lang,"Sam Taylor-Wood",Acteur50,12,2));
+		
+		List<String> ActeurListe = new ArrayList<String>();
+		ActeurListe.add("Liam Neeson");
+		ActeurListe.add("Ben Kingsley");
+		ActeurListe.add("Ralph Fiennes");
+		ActeurListe.add("Jonathan Sagall");
+		ActeurListe.add("Caroline Goodall");
+		
+		Film film3 = createMovie(new Film("La Liste de Schindler",195,lang,"Steven Spielberg",ActeurListe,0,3));
+		
+		List<String> ActeurMM = new ArrayList<String>();
+		ActeurMM.add("Liam Neeson");
+		ActeurMM.add("Nicolas Bedos");
+		ActeurMM.add("Denis Podalydès");
+		ActeurMM.add("Antoine Gouy");
+		ActeurMM.add("Pierre Arditi");
+		
+		Film film4 = createMovie(new Film("Monsieur et Madame Adelman",120,lang,"Nicolas Bedos",ActeurMM,0,4));
+		
+		List<String> ActeurOSS = new ArrayList<String>();
+		ActeurOSS.add("Jean Dujardin");
+		ActeurOSS.add("Bérénice Bejo");
+		ActeurOSS.add("Aure Atika");
+		ActeurOSS.add("Richard Sammel");
+		ActeurOSS.add("Philippe Lefebvre");
+		
+		Film film5 = createMovie(new Film("OSS 117 : Le Caire, nid d'espions",99,lang,"Michel Hazanavicius",ActeurOSS,0,5));
+		
+		
+		List<String> ActeurTrans = new ArrayList<String>();
+		ActeurTrans.add("Jason Statham");
+		ActeurTrans.add("Shu Qi");
+		ActeurTrans.add("François Berléand");
+		ActeurTrans.add("Matt Schulze");
+		ActeurTrans.add("Ric Young");
+		
+		Film film6 = createMovie(new Film("Le Transporteur",142,lang,"Luc Besson",ActeurTrans,0,6));
+		
+		List<String> ActeurEWS = new ArrayList<String>();
+		ActeurAquaman.add("Tom Cruise");
+		ActeurAquaman.add("Nicole Kidman");
+		ActeurAquaman.add("Madison Eginton");
+		ActeurAquaman.add("Sydney Pollack");
+		ActeurAquaman.add("Marie Richardson");
+		
+		Film film7 = createMovie(new Film("Eyes Wide Shut",159,lang,"Stanley Kubrick",ActeurEWS,0,7));
+		
+
 
 		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);		
 		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,13,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,16,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,19,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,22,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);		
-		addSeance(new Seance(2,film1,20,12,2018,10,1),c1);
-		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+		addSeance(new Seance(3,film1,19,12,2018,13,1),c1);
+		addSeance(new Seance(4,film1,19,12,2018,16,1),c1);
+		addSeance(new Seance(5,film1,19,12,2018,19,1),c1);
+		addSeance(new Seance(6,film1,19,12,2018,22,1),c1);
+		addSeance(new Seance(7,film1,19,12,2018,10,1),c1);		
+		addSeance(new Seance(8,film1,20,12,2018,10,1),c1);
+		addSeance(new Seance(9,film1,19,12,2018,10,1),c1);
 		
 
 	}
