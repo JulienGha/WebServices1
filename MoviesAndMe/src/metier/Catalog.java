@@ -33,8 +33,13 @@ public class Catalog implements ICatalog{
         List<String> lang = new ArrayList<String>();
         lang.add("FR");
 		
-		Cinema c1 = createCinema(new Cinema("Le Grand rex", new Address(1,"Boulevard Poissonni�re","Paris","75002",1), 1));
- 
+		Cinema c1 = createCinema(new Cinema("Le Grand rex", new Address(1,"Boulevard Poissonnière","Paris","75002",1), 1));
+ 		Cinema c2 = createCinema(new Cinema("UGC Ciné Cité Les Halles", new Address(7,"place de la rodonte forum de halles","Paris","75001",2), 2));
+		Cinema c3 = createCinema(new Cinema("UGC Ciné Cité Bercy", new Address(2,"Cour Saint-Emilion","Paris","75012",3), 3));
+		Cinema c4 = createCinema(new Cinema("UGC Lyon Bastille", new Address(12,"Brue de Lyon","Paris","75012",4), 4));
+		Cinema c5 = createCinema(new Cinema("UGC Montparnasse", new Address(83,"Boulevard du Montparnasse","Paris","75006",5), 5));
+		Cinema c6 = createCinema(new Cinema("UGC Rotonde", new Address(103,"Boulevard du Montparnasse","Paris","75006",6), 6));
+		Cinema c7 = createCinema(new Cinema("UGC Danton", new Address(99,"Boulevard Saint-Germain","Paris","75006",7), 7));
         
 		List<String> ActeurAquaman = new ArrayList<String>();
 		ActeurAquaman.add("Jason Momoa");
@@ -46,20 +51,16 @@ public class Catalog implements ICatalog{
 		
 		Film film1 = createMovie(new Film("Aquaman",142,lang,"James Wan",ActeurAquaman,0,1));
 
-		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);
-//		
-//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,13,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,16,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,19,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,22,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
-//		
-//		addSeance(new Seance(2,film1,20,12,2018,10,1),c1);
-//		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);		
+		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,13,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,16,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,19,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,22,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);		
+		addSeance(new Seance(2,film1,20,12,2018,10,1),c1);
+		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
 		
-		
-		Cinema c2 = createCinema(new Cinema("Bretagne", new Address(73,"Boulevard du Montparnasse","Paris","75006",2), 2));
 
 	}
 
