@@ -108,17 +108,77 @@ public class Catalog implements ICatalog{
 		
 
 
-		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);		
-		addSeance(new Seance(2,film1,19,12,2018,10,1),c1);
+		addSeance(new Seance(1,film1,17,12,2018,21,1),c1);
+		addSeance(new Seance(2,film6,19,12,2018,10,1),c1);
 		addSeance(new Seance(3,film1,19,12,2018,13,1),c1);
-		addSeance(new Seance(4,film1,19,12,2018,16,1),c1);
-		addSeance(new Seance(5,film1,19,12,2018,19,1),c1);
-		addSeance(new Seance(6,film1,19,12,2018,22,1),c1);
-		addSeance(new Seance(7,film1,19,12,2018,10,1),c1);		
-		addSeance(new Seance(8,film1,20,12,2018,10,1),c1);
-		addSeance(new Seance(9,film1,19,12,2018,10,1),c1);
+		addSeance(new Seance(4,film5,19,12,2018,16,1),c1);
+		addSeance(new Seance(5,film7,19,12,2018,19,1),c1);
+		addSeance(new Seance(6,film2,19,12,2018,22,1),c1);
+		addSeance(new Seance(7,film4,19,12,2018,10,1),c1);
+		addSeance(new Seance(8,film3,20,12,2018,10,1),c1);
+		addSeance(new Seance(9,film2,19,12,2018,10,1),c1);
 		
-
+		addSeance(new Seance(11,film1,17,12,2018,21,1),c2);
+		addSeance(new Seance(12,film2,19,12,2018,10,1),c2);
+		addSeance(new Seance(13,film3,19,12,2018,13,1),c2);
+		addSeance(new Seance(14,film4,19,12,2018,16,1),c2);
+		addSeance(new Seance(15,film5,19,12,2018,19,1),c2);
+		addSeance(new Seance(16,film6,19,12,2018,22,1),c2);
+		addSeance(new Seance(17,film7,19,12,2018,10,1),c2);
+		addSeance(new Seance(18,film2,20,12,2018,10,1),c2);
+		addSeance(new Seance(19,film6,19,12,2018,10,1),c2);
+		
+		addSeance(new Seance(21,film7,17,12,2018,21,1),c3);
+		addSeance(new Seance(22,film6,19,12,2018,10,1),c3);
+		addSeance(new Seance(23,film5,19,12,2018,13,1),c3);
+		addSeance(new Seance(24,film4,19,12,2018,16,1),c3);
+		addSeance(new Seance(25,film3,19,12,2018,19,1),c3);
+		addSeance(new Seance(26,film2,19,12,2018,22,1),c3);
+		addSeance(new Seance(27,film1,19,12,2018,10,1),c3);
+		addSeance(new Seance(28,film4,20,12,2018,10,1),c3);
+		addSeance(new Seance(29,film5,19,12,2018,10,1),c3);
+		
+		addSeance(new Seance(31,film1,17,12,2018,21,1),c4);
+		addSeance(new Seance(32,film3,19,12,2018,10,1),c4);
+		addSeance(new Seance(33,film5,19,12,2018,13,1),c4);
+		addSeance(new Seance(34,film7,19,12,2018,16,1),c4);
+		addSeance(new Seance(35,film2,19,12,2018,19,1),c4);
+		addSeance(new Seance(36,film4,19,12,2018,22,1),c4);
+		addSeance(new Seance(37,film6,19,12,2018,10,1),c4);
+		addSeance(new Seance(38,film3,20,12,2018,10,1),c4);
+		addSeance(new Seance(39,film7,19,12,2018,10,1),c4);
+		
+		addSeance(new Seance(41,film2,17,12,2018,21,1),c5);
+		addSeance(new Seance(42,film4,19,12,2018,10,1),c5);
+		addSeance(new Seance(43,film6,19,12,2018,13,1),c5);
+		addSeance(new Seance(44,film7,19,12,2018,16,1),c5);
+		addSeance(new Seance(45,film5,19,12,2018,19,1),c5);
+		addSeance(new Seance(46,film3,19,12,2018,22,1),c5);
+		addSeance(new Seance(47,film1,19,12,2018,10,1),c5);
+		addSeance(new Seance(48,film6,20,12,2018,10,1),c5);
+		addSeance(new Seance(49,film1,19,12,2018,10,1),c5);
+		
+		addSeance(new Seance(51,film7,17,12,2018,21,1),c6);
+		addSeance(new Seance(52,film1,19,12,2018,10,1),c6);
+		addSeance(new Seance(53,film6,19,12,2018,13,1),c6);
+		addSeance(new Seance(54,film2,19,12,2018,16,1),c6);
+		addSeance(new Seance(55,film5,19,12,2018,19,1),c6);
+		addSeance(new Seance(56,film3,19,12,2018,22,1),c6);
+		addSeance(new Seance(57,film4,19,12,2018,10,1),c6);
+		addSeance(new Seance(58,film7,20,12,2018,10,1),c6);
+		addSeance(new Seance(59,film6,19,12,2018,10,1),c6);
+		
+		addSeance(new Seance(61,film1,17,12,2018,21,1),c7);
+		addSeance(new Seance(62,film2,19,12,2018,10,1),c7);
+		addSeance(new Seance(63,film3,19,12,2018,13,1),c7);
+		addSeance(new Seance(64,film5,19,12,2018,16,1),c7);
+		addSeance(new Seance(65,film7,19,12,2018,19,1),c7);
+		addSeance(new Seance(66,film3,19,12,2018,22,1),c7);
+		addSeance(new Seance(67,film6,19,12,2018,10,1),c7);
+		addSeance(new Seance(68,film5,20,12,2018,10,1),c7);
+		addSeance(new Seance(69,film3,19,12,2018,10,1),c7);
+		
+		
 	}
 
 	
